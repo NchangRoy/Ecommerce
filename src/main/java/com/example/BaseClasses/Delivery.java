@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 import com.example.BaseClasses.Enums.DeliveryStatus;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -24,6 +26,7 @@ public class Delivery {
     private String trackingNumber;
     private LocalDateTime shippedAt;
     private LocalDateTime deliveredAt;
+    @Enumerated(EnumType.STRING)
     private DeliveryStatus status;
 
     

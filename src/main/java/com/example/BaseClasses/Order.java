@@ -11,18 +11,23 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "orders")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer orderId;
+    @OneToOne
     private Cart cart;
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
     private Double totalAmount;
-
+    @ManyToOne
     private Discount discount;
     private LocalDateTime createdAt;
     public Order(Cart cart, OrderStatus status, Double totalAmount, LocalDateTime createdAt) {

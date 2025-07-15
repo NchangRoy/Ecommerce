@@ -1,11 +1,12 @@
 package com.example.BaseClasses;
 
-import org.hibernate.annotations.ManyToAny;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Item {
@@ -14,7 +15,7 @@ public class Item {
     private Integer itemId;
     private  String name;
     private  String description;
-    @ManyToAny
+    @ManyToOne
     private Category category;
     public Item( String name, String description, Category category) {
         
