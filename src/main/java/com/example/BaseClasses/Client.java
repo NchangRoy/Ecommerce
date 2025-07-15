@@ -7,9 +7,9 @@ public class Client {
      private String email;
      private  String phoneNumber;
      private String password;
-    public Client(Integer clientId, String firstName, String lastName, String email, String phoneNumber,
+    public Client( String firstName, String lastName, String email, String phoneNumber,
             String password) {
-        this.clientId = clientId;
+        
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

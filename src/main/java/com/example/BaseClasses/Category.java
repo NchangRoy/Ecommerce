@@ -15,8 +15,8 @@ public class Category {
     @ManyToOne
     private Section section;
     private String name;
-    public Category(Integer categoryId, Section section, String name) {
-        this.categoryId = categoryId;
+    public Category( Section section, String name) {
+       
         this.section = section;
         this.name = name;
     }

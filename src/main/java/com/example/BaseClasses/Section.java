@@ -15,8 +15,8 @@ public class Section {
     private String name;
    
 
-    public Section(Integer sectionId, String name) {
-        this.sectionId = sectionId;
+    public Section( String name) {
+       
         this.name = name;
 
     }

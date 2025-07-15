@@ -18,9 +18,9 @@ public class CartItem {
     @ManyToOne
     private ItemVariant itemVariant;
     private Integer quantity;
-    public CartItem(Integer cartItemId, Cart cart, com.example.BaseClasses.ItemVariant itemVariant,
+    public CartItem( Cart cart, com.example.BaseClasses.ItemVariant itemVariant,
             Integer quantity) {
-        this.cartItemId = cartItemId;
+        
         this.cart = cart;
         this.itemVariant = itemVariant;
         this.quantity = quantity;

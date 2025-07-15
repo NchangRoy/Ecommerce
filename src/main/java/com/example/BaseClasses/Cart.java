@@ -14,8 +14,8 @@ public class Cart {
     private Integer cartId;
     @ManyToAny
     private Client client;
-    public Cart(Integer cartId, Client client) {
-        this.cartId = cartId;
+    public Cart( Client client) {
+       
         this.client = client;
     }
     public Cart(){

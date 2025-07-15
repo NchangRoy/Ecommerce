@@ -24,9 +24,9 @@ public class Content {
     private String url;
     private LocalDate createdAt;
     private String createdBy;
-    public Content(Integer contentId, ContentType type, String caption, String url, LocalDate createdAt,
+    public Content( ContentType type, String caption, String url, LocalDate createdAt,
             String createdBy) {
-        this.contentId = contentId;
+       
         this.type = type;
         this.caption = caption;
         this.url = url;
